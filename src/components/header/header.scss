@@ -1,0 +1,23 @@
+.header{
+    background: green;
+    color:#fff;
+    padding: 15px 0;
+    &.active-header{
+        background-color: yellow
+    }
+    &.active-header{
+        background-color: black;
+        position: fixed;
+        width: 100%;
+        top: 0;
+    }
+    ul{
+        margin: 0;
+    }
+    a{
+        color:#fff;
+        padding: 15px;
+        text-decoration: none;
+        display: block;
+    }
+}
