@@ -13,11 +13,15 @@ import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useForm } from "react-hook-form";
 import LoadingButton from "@mui/lab/LoadingButton";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { loginAction } from "../../Redux/Actions/UserActions";
+import {useNavigate} from "react-router-dom";
 const theme = createTheme();
 const Login = () => {
   const dispatch=useDispatch()
+  const navi=useNavigate()
+  const {userInfo}=useSelector(st=>st.userLogin)
+
   const {
     register,
     handleSubmit,
@@ -27,6 +31,11 @@ const Login = () => {
   const handleFormSubmit = (data) => {
     dispatch(loginAction(data.email,data.password))
   };
+  React.useEffect(()=>{
+    if(userInfo && userInfo.token){
+      navi("/")
+    }
+  },[navi,userInfo])
 
   return (
     <ThemeProvider theme={theme}>
