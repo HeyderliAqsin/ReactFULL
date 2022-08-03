@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
+import { BASE_URL } from "../api/ApiConfig";
 import ProductList from "../components/product-list/ProductList";
+import { useLanguage } from "../contexts/LanguageContext";
 
 const Products = () => {
     const [products,setProducts]=useState([]);
@@ -9,7 +11,7 @@ const Products = () => {
     
     useEffect(() => {
       const getProductList = () => {
-        fetch("/api/products/AZ")
+        fetch(`${BASE_URL}/api/products/${useLanguage}`)
           .then((c) => c.json())
           .then((c) => {
             setProducts(c);

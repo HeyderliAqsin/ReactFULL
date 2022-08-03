@@ -4,7 +4,6 @@ import thunk from "redux-thunk";
 import { cartReducers } from "./Reducers/CartReducers";
 import { userLoginReducers, userRegisterReducers } from "./Reducers/UserReducers";
 
-//middleware (redux-thunk)
 
 const reducer=combineReducers({
     cart:cartReducers,

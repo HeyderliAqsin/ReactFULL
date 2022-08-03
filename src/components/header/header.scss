@@ -1,5 +1,5 @@
 .header{
-    background: green;
+    background: rgb(82, 6, 72);
     color:#fff;
     padding: 15px 0;
     &.active-header{
@@ -11,8 +11,17 @@
         width: 100%;
         top: 0;
     }
+  
     ul{
         margin: 0;
+        li{
+            button{
+                color: rgb(205, 25, 139);
+                font-weight: 700;
+                padding: 4px 7px;
+                border-radius: 50%;
+            }
+        }
     }
     a{
         color:#fff;

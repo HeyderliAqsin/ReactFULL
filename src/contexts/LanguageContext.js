@@ -2,7 +2,7 @@ import {  createContext, useContext, useEffect, useState } from "react"
 
 
 const LanguageContext=createContext();
-const defaultLanguage=localStorage.getItem("langCode")  || "AZ";
+const defaultLanguage=localStorage.getItem("langCode")  || "RU";
 
 const LanguageProvider=({children})=>{
     const [language, setLanguage] = useState(defaultLanguage)

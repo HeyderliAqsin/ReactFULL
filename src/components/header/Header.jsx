@@ -27,15 +27,14 @@ const Header = ({ num }) => {
               <h2>Logo</h2>
             </Link>
           </div>
-          <ul className="d-flex list-unstyled">
+          <ul className="d-flex list-unstyled align-items-center">
             <li>
-              <button onClick={() => changeLanguage("AZ")}>Az</button>
-              <button onClick={() => changeLanguage("EN")}>En</button>
+              <button onClick={() => changeLanguage("EN")}>EN</button>
+              <button className="ms-1" onClick={() => changeLanguage("RU")}>RU</button>
             </li>
             <li>
               <Link to="/">
                 Home
-                <i className="far fa-circle-user" />
               </Link>
             </li>
             <li>
@@ -54,10 +53,10 @@ const Header = ({ num }) => {
             ) : (
               <>
                 <li>
-                  <Link to="/login">Login</Link>
+                  <Link to="/login">Login /</Link>
                 </li>
                 <li>
-                  <Link to="/register">Register</Link>
+                  <Link to="/register"> Register</Link>
                 </li>
               </>
             )}

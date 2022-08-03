@@ -19,7 +19,7 @@ const Home = () => {
     getProductList();
   }, [language]);
   return (
-    <ProductList loading={loading} data={products}/>
+    <ProductList data={products} loading={loading} />
     );
 };
 export default Home;
